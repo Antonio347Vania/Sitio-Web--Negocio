@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cápsula Musical</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="main-layout-container">
+        <nav class="sidebar">
+            <div class="sidebar-header">
+                <!-- <img src="images/search-icon.png" alt="Icono de Búsqueda" class="search-icon"> -->
+                <!-- El icono de búsqueda no está en el PDF original de la sidebar, así que lo comento si no lo necesitas -->
+            </div>
+            <ul>
+                <li><a href="index.html">INICIO</a></li>
+                <li><a href="discos.html">DISCOS</a></li>
+                <li><a href="cd.html">CD</a></li>
+                <li><a href="casetes.html">CASETES</a></li>
+                <li><a href="reproductores.html">REPRODUCTORES</a></li>
+                <li><a href="tocadiscos.html">TOCA DISCOS</a></li>
+                <li><a href="contacto.html">CONTACTO</a></li>
+            </ul>
+            <!-- Este es el contenedor para el botón de INICIAR SESION -->
+            <div class="login-button-container">
+                <a href="#">INICIAR SESION</a>
+            </div>
+        </nav>
+
+        <div class="content-wrapper">
+            <header>
+                <div class="header-content">
+                    <img src="images/vinyl-icon.png" alt="Icono de Vinilo" class="vinyl-icon">
+                    <h1>CÁPSULA MUSICAL</h1>
+                </div>
+                <button class="hamburger-menu" aria-label="Menú de navegación">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </header>
+
+            <main>
+                <section class="products-section">
+                    <h2>NUESTROS PRODUCTOS</h2>
+                    <div class="product-grid">
+                        <div class="product-item">
+                            <img src="images/nirvana-cd.png" alt="Disco CD de Nirvana">
+                            <p class="product-title">Disco CD de Nirvana</p>
+                            <p class="product-description">nirvana smells best...</p>
+                        </div>
+                        <div class="product-item">
+                            <img src="images/beatles-cd.png" alt="Disco CD de The Beatles">
+                            <p class="product-title">Disco CD de The Beatles</p>
+                            <p class="product-description">Abbey Road</p>
+                        </div>
+                        <div class="product-item">
+                            <img src="images/arctic-monkeys-cd.png" alt="Disco CD de Arctic Monkeys">
+                            <p class="product-title">Disco CD de Arctic Monkeys</p>
+                            <p class="product-description">AM</p>
+                        </div>
+                        <div class="product-item">
+                            <img src="images/rolling-stones-cd.png" alt="Disco CD de The Rolling Stones">
+                            <p class="product-title">Disco CD de The Rolling Stones</p>
+                            <p class="product-description">Let It Bleed</p>
+                        </div>
+                        <div class="product-item">
+                            <img src="images/weeknd-cassette.png" alt="Disco casete de The Weeknd">
+                            <p class="product-title">Disco casete de The Weeknd</p>
+                            <p class="product-description">Starboy</p>
+                        </div>
+                        <div class="product-item">
+                            <img src="images/metallica-cassette.png" alt="Disco casete de Metallica">
+                            <p class="product-title">Disco casete de Metallica</p>
+                            <p class="product-description">Load</p>
+                        </div>
+                        <div class="product-item">
+                            <img src="images/nirvana-live-cassette.png" alt="Disco Casete de Nirvana Live">
+                            <p class="product-title">Disco Casete de Nirvana</p>
+                            <p class="product-description">Live at Reading</p>
+                        </div>
+                        <div class="product-item">
+                            <img src="images/lana-del-rey-cassette.png" alt="Disco Casete de Lana Del Rey">
+                            <p class="product-title">Disco Casete de Lana Del Rey</p>
+                            <p class="product-description">Ultraviolence</p>
+                        </div>
+                    </div>
+                    <img src="images/cassette-headphones.png" alt="Icono de casete con audífonos" class="cassette-headphones-icon">
+                </section>
+            </main>
+
+            <footer>
+                <p>COPYRIGHTT© 2025 VANIA ANTONIO</p>
+            </footer>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const hamburgerMenu = document.querySelector('.hamburger-menu');
+            const sidebar = document.querySelector('.sidebar');
+
+            hamburgerMenu.addEventListener('addEventListener', () => {
+                sidebar.classList.toggle('active');
+                hamburgerMenu.classList.toggle('active');
+            });
+
+            // Cerrar sidebar al hacer clic fuera (opcional)
+            document.addEventListener('click', (event) => {
+                if (!sidebar.contains(event.target) && !hamburgerMenu.contains(event.target) && sidebar.classList.contains('active')) {
+                    sidebar.classList.remove('active');
+                    hamburgerMenu.classList.remove('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
